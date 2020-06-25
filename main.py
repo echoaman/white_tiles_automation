@@ -1,5 +1,4 @@
 import cv2
-import os
 from ppadb.client import Client
 import time
 
