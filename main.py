@@ -13,7 +13,7 @@ if len(devices) == 0:
 device = devices[0]
 
 depth = 1200                       # y coordinate
-boxes = [135, 405, 675, 945]       # x coordinates
+tiles = [135, 405, 675, 945]       # x coordinates
 
 while True:
     screen = device.screencap()
@@ -23,14 +23,14 @@ while True:
 
     screen = cv2.imread('screen.png')
 
-    for idx,box in enumerate(boxes):
-        r, g, b = screen[depth][box]
+    for idx,tile in enumerate(tiles):
+        r, g, b = screen[depth][tile]
         # print(r, g, b)
         
         if r == 255 and g == 255 and b == 255:
             continue
 
-        device.shell(f'input touchscreen swipe {box} {depth} {box} {depth} 10')
-        print(f'Box clicked: {idx}')
+        device.shell(f'input touchscreen swipe {tile} {depth} {tile} {depth} 10')
+        print(f'Tile clicked: {idx}')
         break
 
