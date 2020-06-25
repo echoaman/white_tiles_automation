@@ -1,6 +1,5 @@
 import cv2
 from ppadb.client import Client
-import time
 
 adb = Client('127.0.0.1', 5037)
 devices = adb.devices()
