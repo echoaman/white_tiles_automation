@@ -26,6 +26,7 @@ while True:
     for idx,box in enumerate(boxes):
         r, g, b = screen[depth][box]
         # print(r, g, b)
+        
         if r == 255 and g == 255 and b == 255:
             continue
 
