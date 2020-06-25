@@ -1,5 +1,4 @@
 import cv2
-import os
 from ppadb.client import Client
 import time
 
@@ -32,5 +31,6 @@ while True:
 
         device.shell(f'input touchscreen swipe {tile} {depth} {tile} {depth} 10')
         print(f'Tile clicked: {idx}')
+        
         break
 
