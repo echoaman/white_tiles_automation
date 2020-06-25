@@ -29,8 +29,8 @@ while True:
         if r == 255 and g == 255 and b == 255:
             continue
 
-        print(idx)
-        device.shell(f'input touchscreen swipe {box} {depth} {box} {depth} 100')
+        device.shell(f'input touchscreen swipe {box} {depth} {box} {depth} 10')
+        print(f'Box clicked: {idx}')
         break
 
     # time.sleep(0.05)
