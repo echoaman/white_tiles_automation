@@ -12,7 +12,7 @@ if len(devices) == 0:
 
 device = devices[0]
 
-depth = 1200
+depth = 1200                       # y coordinate
 boxes = [135, 405, 675, 945]       # x coordinates
 
 while True:
@@ -33,17 +33,3 @@ while True:
         print(f'Box clicked: {idx}')
         break
 
-    # time.sleep(0.05)
-
-# cv2.destroyAllWindows()
-
-def debug():
-    screen = device.screencap()
-
-    with open('screen.png', 'wb') as f:
-        f.write(screen)
-
-    screen = cv2.imread('screen.png')
-
-    for box in boxes:
-        print(screen[depth][box])
